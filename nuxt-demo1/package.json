@@ -4,6 +4,12 @@
   "description": "test",
   "author": "Jie <934164066@QQ.COM>",
   "private": true,
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0", 
+      "port": 3000 
+    }
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -13,6 +19,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "element-ui": "^2.12.0",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
@@ -20,6 +27,9 @@
     "eslint": "^4.19.1",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^2.1.1",
-    "eslint-plugin-vue": "^4.0.0"
+    "eslint-plugin-vue": "^4.0.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "scss-loader": "^0.0.1"
   }
 }

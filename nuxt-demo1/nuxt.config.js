@@ -33,19 +33,34 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+      // if(isDev){
+      //   Object.assign(config.resolve.alias, {
+      //     'sass': path.resolve(__dirname, 'assets'),
+      //   });
+      // }
     }
   },
   modules: [
-    '@nuxtjs/axios',
+    // '@nuxtjs/axios',
   ],
-  axios: {
-    prefix: '/api/',
-    proxy: true // Can be also an object with default options
-  },
+  // axios: {
+  //   prefix: '/api/',
+  //   proxy: true // Can be also an object with default options
+  // },
 
   proxy: {
-    '/api/': { target: 'http://localhost:8080', pathRewrite: { '^/api/': '' } }
+    //'/api/': { target: 'http://localhost:8080', pathRewrite: { '^/api/': '' } }
+  },
+  css: ['assets/main.scss'],
+  plugins: [
+    {
+      src: "~plugins/element-ui.js",
+      ssr: false
+    },
+    '~/plugins/test1.js',
+  ],
+  generate: {
+    devtools: true,
   }
-
 }
 
